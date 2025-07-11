@@ -2,27 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
-import { cacheHeaders, randomInt } from '../utils';
-
-export const prerender = false;
-
-const tags = ['/revalidation', 'cats-related', 'all-pets-related'];
-const headers = cacheHeaders(365, tags);
-
-Object.entries(headers).map(([k, v]) => {
-    Astro.response.headers.set(k, v);
-});
 
 const explainer = `
-Itt van az explain szöveg a kori oktatáshoz... Under construction...
+A Vénfarkasok egy amatőr felnőtt hokicsapat, 2015 óta.
+
+Mindig is szerettél volna megtanulni rendesen korizni? Érdekel a jégkorong világa? Vagy csak nézőtéri szakértőből szeretnél tényleges sportolóvá válni?
+Jó helyen jársz!
 `;
+---
 
-<Layout title="Korcsolya tanulás">
-    <h1 class="mb-10">Tanulj korizni a nulláról!</h1>
-    <Markdown content={explainer} class="mb-10" />
-    <div class="flex flex-wrap gap-4">
-        <button class="revalidate-button btn" data-tag={exampleTag}>Invalidate tag: {exampleTag}</button>
-        <button class="btn" onclick="location.reload()">Reload page</button>
-    </div>
+<Layout title="Sportra Fel">
+    <ContextAlert class="mb-8" />
+    <h1 class="mb-10">Üdv a honlapon! Tanulj meg jégkorongozni velünk!</h1>
+    <Markdown content={explainer} class="mb-10 text-lg" />
+    <p>
+        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+    </p>
 </Layout>
-
