@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+
+const explainer = `
+Explain szöveg...Under construction...
+`;
+---
+
+<Layout title="Rólunk">
+    <ContextAlert class="mb-8" />
+    <h1 class="mb-10">Kik is vagyunk mi?</h1>
+    <Markdown content={explainer} class="mb-10 text-lg" />
+    <p>
+        <a href="/kori" class="btn btn-lg sm:min-w-64">Szeretnék csatlakozni!!</a>
+    </p>
+</Layout>
