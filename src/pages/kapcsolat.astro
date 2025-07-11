@@ -1,18 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-Explain szöveg...Under construction...
-`;
 ---
 
 <Layout title="Kapcsolat">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Képek, videók</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://drive.google.com/drive/folders/1-9uK_ay605Td9tAR6V_2G1JhvL7xXIbY" target="_blank" rel="noopener" class="btn btn-lg sm:min-w-64">Megnézem a galériát!</a>
+    <h1 class="mb-10">Kapcsolat</h1>
+    <p class="mb-4">
+        Kérdése van? Vegye fel velünk a kapcsolatot az alábbi elérhetőségeken, vagy küldjön üzenetet az űrlapon keresztül!
     </p>
+    <ul class="mb-8 text-lg">
+        <li><strong>Email:</strong> <a href="mailto:hello@pelda.hu">hello@pelda.hu</a></li>
+        <li><strong>Telefon:</strong> <a href="tel:+3612345678">+36 1 234 5678</a></li>
+        <li><strong>Cím:</strong> 1234 Budapest, Példa utca 1.</li>
+        <li><strong>Nyitvatartás:</strong> H-P 9:00 - 17:00</li>
+    </ul>
+    <h2 class="mb-4">Üzenet küldése</h2>
+    <form class="flex flex-col gap-4 max-w-md" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>
+            Név:
+            <input type="text" name="name" required class="input input-bordered w-full" />
+        </label>
+        <label>
+            Email:
+            <input type="email" name="email" required class="input input-bordered w-full" />
+        </label>
+        <label>
+            Üzenet:
+            <textarea name="message" required class="textarea textarea-bordered w-full"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Küldés</button>
+    </form>
+    <div class="mt-10">
+        <h2 class="mb-2">További információk</h2>
+        <ul>
+            <li>Közösségi média: <a href="https://facebook.com/pelda" target="_blank">Facebook oldalunk</a></li>
+            <li>Galériánkat itt találja: <a href="https://drive.google.com/drive/folders/1-9uK_ay605Td9tAR6V_2G1JhvL7xXIbY" target="_blank" rel="noopener">Megnézem a galériát!</a></li>
+        </ul>
+    </div>
 </Layout>
