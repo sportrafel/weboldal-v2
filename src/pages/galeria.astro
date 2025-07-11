@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+
+const explainer = `
+Explain szöveg...Under construction...
+`;
+---
+
+<Layout title="Galéria">
+    <ContextAlert class="mb-8" />
+    <h1 class="mb-10">Képek, videók</h1>
+    <Markdown content={explainer} class="mb-10 text-lg" />
+    <p>
+        <a href="https://drive.google.com/drive/folders/1-9uK_ay605Td9tAR6V_2G1JhvL7xXIbY" class="btn btn-lg sm:min-w-64">Megnézem a galériát!</a>
+    </p>
+</Layout>
