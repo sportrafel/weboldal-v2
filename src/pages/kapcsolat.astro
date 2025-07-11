@@ -5,16 +5,15 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Kapcsolat">
     <h1 class="mb-10">Kapcsolat</h1>
     <p class="mb-4">
-        Kérdése van? Vegye fel velünk a kapcsolatot az alábbi elérhetőségeken, vagy küldjön üzenetet az űrlapon keresztül!
+        Kérdésed van? Vedd fel velünk a kapcsolatot az alábbi elérhetőségeken, vagy küldj üzenetet az űrlapon keresztül!
     </p>
     <ul class="mb-8 text-lg">
-        <li><strong>Email:</strong> <a href="mailto:hello@pelda.hu">hello@pelda.hu</a></li>
-        <li><strong>Telefon:</strong> <a href="tel:+3612345678">+36 1 234 5678</a></li>
-        <li><strong>Cím:</strong> 1234 Budapest, Példa utca 1.</li>
-        <li><strong>Nyitvatartás:</strong> H-P 9:00 - 17:00</li>
+        <li><strong>Email:</strong> <a href="mailto:sportrafel@gmail.com">sportrafel@gmail.com</a></li>
+        <li><strong>Telefon:</strong> <a href="tel:+36305329329">+36 30 532 9329</a></li>
+        <li><strong>Helyszínek:</strong> Tüskecsarnok, FTC Sátras Jégpálya, Kisstadion</li>
     </ul>
     <h2 class="mb-4">Üzenet küldése</h2>
-    <form class="flex flex-col gap-4 max-w-md" name="contact" method="POST" data-netlify="true">
+    <form class="flex flex-col gap-4 max-w-md" name="contact" method="POST" data-netlify="true" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <label>
             Név:
@@ -31,10 +30,10 @@ import Layout from '../layouts/Layout.astro';
         <button type="submit" class="btn btn-primary">Küldés</button>
     </form>
     <div class="mt-10">
-        <h2 class="mb-2">További információk</h2>
+        <h2 class="mb-2">További elérhetőségek</h2>
         <ul>
-            <li>Közösségi média: <a href="https://facebook.com/pelda" target="_blank">Facebook oldalunk</a></li>
-            <li>Galériánkat itt találja: <a href="https://drive.google.com/drive/folders/1-9uK_ay605Td9tAR6V_2G1JhvL7xXIbY" target="_blank" rel="noopener">Megnézem a galériát!</a></li>
+            <li>közösségi média logók, linkkel</li>
+            <li>Nézd meg a <a href="https://drive.google.com/drive/folders/1-9uK_ay605Td9tAR6V_2G1JhvL7xXIbY" target="_blank" rel="noopener">galériánkat!</a> is!</li>
         </ul>
     </div>
 </Layout>
