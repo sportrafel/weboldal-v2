@@ -4,16 +4,23 @@ const currentYear = new Date().getFullYear();
 
 <style>
   .footer {
-    background: none;
-    color: #fff;
-    padding: 2.5rem 1rem 0.7rem 1rem; /* Increased top padding */
-    display: flex;
-    flex-direction: column; /* Stack rows */
-    align-items: center;
-    justify-content: center;
-    gap: 0.7rem;
-    text-align: left;
-  }
+  width: 100vw;          /* Make the footer as wide as the viewport */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;    /* Center the footer if inside a container */
+  margin-right: -50vw;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2.5rem 1rem 0.7rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  text-align: left;
+  background: none;
+  color: #fff;
+}
   .footer-top, .footer-bottom {
     width: 100%;
     display: flex;
