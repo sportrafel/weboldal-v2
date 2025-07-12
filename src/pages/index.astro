@@ -11,6 +11,30 @@ Jó helyen jársz!
 `;
 ---
 
+<style>
+    .button {
+        @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-content cursor-pointer text-center font-semibold no-underline transition-colors;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: var(--btn-font-size, 0.875rem);
+        border-radius: var(--btn-border-radius, 0.25rem);
+
+        &:hover {
+            @apply bg-primary/85;
+        }
+
+        &:disabled {
+            @apply text-gray-400 bg-gray-700;
+        }
+    }
+
+    .btn-lg {
+        --btn-font-size: 1.125rem;
+        --btn-px: 1.5rem;
+        --btn-py: 1.125rem;
+    }
+</style>
+
 <Layout title="Sportra Fel">
     <ContextAlert class="mb-8" />
     <h1 class="mb-10">Üdv a honlapon!\n Tanulj meg jégkorongozni velünk!</h1>
@@ -20,18 +44,18 @@ Jó helyen jársz!
     </p>
     <h2 class="mb-10">Rendszeres mozgásra és jó társaságra vágysz?</h2>
     <p>
-        <a href="/edzesek" class="btn btn-lg sm:min-w-64">Jégpályák, időpontok</a>
+        <a href="/edzesek" class="button btn-lg sm:min-w-64">Jégpályák, időpontok</a>
     </p>
     <h2 class="mb-10">Tanulj meg nálunk korizni akár a nulláról!</h2>
     <p>
-        <a href="/kori" class="btn btn-lg sm:min-w-64">Szeretnék megtanulni korizni!</a>
+        <a href="/kori" class="button btn-lg sm:min-w-64">Szeretnék megtanulni korizni!</a>
     </p>
     <h2 class="mb-10">Ismerd meg a jégkorong sportot!</h2>
     <p>
-        <a href="/hoki" class="btn btn-lg sm:min-w-64">Szeretnék megtanulni hokizni!</a>
+        <a href="/hoki" class="button btn-lg sm:min-w-64">Szeretnék megtanulni hokizni!</a>
     </p>
     <h2 class="mb-10"><h2 class="mb-10">Érezd jól magad!\n Légy te is amatőr sportoló nézőtéri "szakértő " helyett!</h2>
     <p>
-        <a href="/galeria" class="btn btn-lg sm:min-w-64">Megnézem, hogy az milyen!</a>
+        <a href="/galeria" class="button btn-lg sm:min-w-64">Megnézem, hogy az milyen!</a>
     </p>
 </Layout>
