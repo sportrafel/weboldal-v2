@@ -9,6 +9,18 @@ import Layout from '../layouts/Layout.astro';
         align-items: center;
         gap: 1rem;  
     }
+    input,
+    textarea {
+    border: 2px solid #000;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
 </style>
 
 
@@ -27,15 +39,15 @@ import Layout from '../layouts/Layout.astro';
         <input type="hidden" name="form-name" value="contact" />
         <label>
             Név:
-            <input type="text" name="Név" required class="input input-bordered w-full" border: 3px solid #000 />
+            <input type="text" name="Név" required class="input input-bordered w-full" placeholder="Add meg a neved..."/>
         </label>
         <label>
             Email:
-            <input type="email" name="E-mail cím" required class="input input-bordered w-full" border: 3px solid #000/>
+            <input type="email" name="E-mail cím" required class="input input-bordered w-full" placeholder="Add meg az email címed..."/>
         </label>
         <label>
             Üzenet:
-            <textarea name="Üzenet" required class="textarea textarea-bordered w-full" border: 3px solid #000 ></textarea>
+            <textarea name="Üzenet" required class="textarea textarea-bordered w-full" placeholder="Ide írhatod az üzeneted..."></textarea>
         </label>
         <button type="submit" class="btn btn-primary">Küldés</button>
     </form>
