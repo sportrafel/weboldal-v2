@@ -4,33 +4,41 @@ import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-A Vénfarkasok egy amatőr felnőtt hokicsapat, 2015 óta.
+A Vénfarkasok egy amatőr felnőtt hokicsapat 2010 óta.
 
-Mindig is szerettél volna megtanulni rendesen korizni? Érdekel a jégkorong világa? Vagy csak nézőtéri szakértőből szeretnél tényleges sportolóvá válni?
+Mindig is szerettél volna megtanulni rendesen korizni? Érdekel a jégkorong világa? Vagy csak nézőtéri "szakértőből" szeretnél tényleges sportolóvá válni?
 Jó helyen jársz!
-
-Jégkorongozz velünk!
-
-Rendszeres mozgásra és jó társaságra vágysz? - Jégpályák, időpontok
-
-Csatlakozz a Vénfarkasok amatőr felnőtt jégkorong csapathoz!
-Alakulás éve: 2010 
-
-Tanulj meg nálunk korizni akár a nulláról! - Kori 
-
-Ismerd meg a jégkorong sportot! - Hoki 
-
-Légy te is amatőr sportoló nézőtéri "szakértő " helyett! - Videók
-
-Érezd jól magad! - Képek 
 `;
 ---
 
+Légy te is amatőr sportoló nézőtéri "szakértő " helyett! - Videók
+
+<h2 class="mb-10">Ismerd meg a jégkorong sportot!</h2>
+    <p>
+        <a href="/hoki" class="btn btn-lg sm:min-w-64">Szeretnék megtanulni hokizni!</a>
+    </p> - Képek 
+
 <Layout title="Sportra Fel">
     <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Üdv a honlapon! Tanulj meg jégkorongozni velünk!</h1>
+    <h1 class="mb-10">Üdv a honlapon!\n Tanulj meg jégkorongozni velünk!</h1>
     <Markdown content={explainer} class="mb-10 text-lg" />
     <p>
         <a href="/rolunk" class="btn btn-lg sm:min-w-64">Ismerj meg minket!</a>
+    </p>
+    <h2 class="mb-10">Rendszeres mozgásra és jó társaságra vágysz?</h2>
+    <p>
+        <a href="/edzesek" class="btn btn-lg sm:min-w-64">Jégpályák, időpontok</a>
+    </p>
+    <h2 class="mb-10">Tanulj meg nálunk korizni akár a nulláról!</h2>
+    <p>
+        <a href="/kori" class="btn btn-lg sm:min-w-64">Szeretnék megtanulni korizni!</a>
+    </p>
+    <h2 class="mb-10">Ismerd meg a jégkorong sportot!</h2>
+    <p>
+        <a href="/hoki" class="btn btn-lg sm:min-w-64">Szeretnék megtanulni hokizni!</a>
+    </p>
+    <h2 class="mb-10"><h2 class="mb-10">Érezd jól magad!\n Légy te is amatőr sportoló nézőtéri "szakértő " helyett!</h2>
+    <p>
+        <a href="/galeria" class="btn btn-lg sm:min-w-64">Megnézem, hogy az milyen!</a>
     </p>
 </Layout>
