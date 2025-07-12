@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+
+const explainer = `
+Jégpályák, időpontok 
+
+Edzéseink alapvetően reggelente, munka előtt vannak a Tüskecsarnokban (térkép), az FTC jégpályán (térkép), és a szezon végén - májusban és júniusban  a Kisstadionban (térkép) 
+
+Hétfő 7.00 - 8.00 Tüskecsarnokban
+Szerda 7.00 - 8.00 Tüskecsarnokban
+Péntek 7.00 - 8.00 FTC jégpályán 
+kori/hoki alapok 
+
+Alapvető korcsolya tudás elsajátítása, az ütőkezelés, illetve passzok gyakorlása, a lövéstechnika alapjainak és  egyszerű feladatoknak a megismerése.
+
+
+Hétfő 21.00 - 22.00 FTC sátor 
+
+Haladó edzés a bajnokságban részt vevő csapattal együtt megfelelő előképzettség után. 
+Összetett, több passzból álló feladatok.  
+A jégkorong játékhoz szükséges szabályok és játékelemek megismerése. 
+
+Csütörtök 7.00 - 8.00 - játék Tüskecsarnokban 
+
+Szombat kb. 8.00 - 9.00 játék Tüskecsarnokban
+`;
+---
+
+<Layout title="Korcsolya tanulás">
+    <ContextAlert class="mb-8" />
+    <h1 class="mb-10">Tanulj meg korizni a nulláról!</h1>
+    <Markdown content={explainer} class="mb-10 text-lg" />
+    <p>
+        <a href="/hoki" class="btn btn-lg sm:min-w-64">Többet is akarok!</a>
+    </p>
+</Layout>
