@@ -4,63 +4,81 @@ const currentYear = new Date().getFullYear();
 
 <style>
   .footer {
-  width: 100%;          /* Make the footer as wide as the viewport */
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;    /* Center the footer if inside a container */
-  margin-right: -50vw;
-  position: relative;
-  box-sizing: border-box;
-  padding: 2.5rem 1rem 0.7rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
-  text-align: left;
-  background: none;
-  color: #fff;
-}
-  .footer-top, .footer-bottom {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5rem 1rem 0.7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    color: #fff;
+  }
+
+  .footer-top {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between; /* key change */
     background: none;
     color: #fff;
     margin: 0;
     padding: 0;
   }
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+  }
+
+  .footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 2rem;
+  }
+
   .footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     font-size: 0.95em;
     opacity: 0.8;
     margin-top: 0.3rem;
     gap: 1rem;
   }
+
   .footer-logo img {
     width: 32px;
     height: 32px;
     object-fit: contain;
   }
-  .footer-links a, .footer-socials a {
+
+  .footer-links a,
+  .footer-socials a {
     color: #fff !important;
     text-decoration: underline;
   }
+
   .back-to-top-arrow {
     margin-right: 4px;
     vertical-align: middle;
   }
 </style>
 
+
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-links">
+    <div class="footer-left">
       <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
         <svg class="back-to-top-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M8 4L4 8M8 4l4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Oldal tetejére
       </a>
+    </div>
+  <div class="footer-center">
+    <div class="footer-links">
       <a href="/kapcsolat">Kapcsolat</a>
     </div>
     <div class="footer-socials">
@@ -71,6 +89,7 @@ const currentYear = new Date().getFullYear();
         <svg viewBox="0 0 24 24" width="1.3em" height="1.3em" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.33 3.608 1.304.974.974 1.242 2.241 1.304 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.33 2.633-1.304 3.608-.974.974-2.241 1.242-3.608 1.304-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07C3.784 21.633 2.517 21.365 1.543 20.39c-.974-.974-1.242-2.241-1.304-3.608C.181 15.216.169 14.836.169 11.632s.012-3.584.07-4.85c.062-1.366.33-2.633 1.304-3.608C2.517 2.517 3.784 2.249 5.15 2.187c1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.691 0 8.266.012 7.051.07 5.837.127 4.731.389 3.757 1.364 2.782 2.338 2.52 3.444 2.463 4.658 2.405 5.873 2.393 6.297 2.393 12s.012 6.127.07 7.342c.057 1.215.319 2.321 1.294 3.295.974.974 2.08 1.236 3.295 1.294C8.266 23.988 8.691 24 12 24s3.734-.012 4.949-.07c1.215-.057 2.321-.319 3.295-1.294.974-.974 1.236-2.08 1.294-3.295.058-1.215.07-1.639.07-7.342s-.012-6.127-.07-7.342c-.057-1.215-.319-2.321-1.294-3.295C19.27.389 18.164.127 16.949.07 15.734.012 15.309 0 12 0zm0 5.838a6.162 6.162 0 0 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.842-11.406a1.44 1.44 0 1 1-2.881 0 1.44 1.44 0 0 1 2.881 0z"/></svg>
       </a>
     </div>
+  </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-logo">
