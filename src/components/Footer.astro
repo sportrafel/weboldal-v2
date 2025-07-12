@@ -64,10 +64,12 @@ const currentYear = new Date().getFullYear();
   }
 
   .footer-links a,
-  .footer-socials a {
-    color: #fff !important;
-    text-decoration: underline;
-  }
+  .footer-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
 
   .back-to-top-arrow {
     margin-right: 4px;
