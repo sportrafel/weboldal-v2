@@ -70,6 +70,22 @@
         }
     }
 
+    .button {
+        @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-content cursor-pointer text-center font-semibold no-underline transition-colors;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: var(--btn-font-size, 0.875rem);
+        border-radius: var(--btn-border-radius, 0.25rem);
+
+        &:hover {
+            @apply bg-primary/85;
+        }
+
+        &:disabled {
+            @apply text-gray-400 bg-gray-700;
+        }
+    }
+
     .btn-lg {
         --btn-font-size: 1.125rem;
         --btn-px: 1.5rem;
