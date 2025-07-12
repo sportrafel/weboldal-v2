@@ -4,21 +4,25 @@ import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-Edzéseink alapvetően reggelente, munka előtt vannak a <a href="https://maps.app.goo.gl/Phnw8rZKnDywfwux9">Tüskecsarnokban</a>, az <a href="https://maps.app.goo.gl/Gbus5m8r33B7EVTf7">FTC sátras jégpályán</a>, 
-és a szezon végén - májusban és júniusban a <a href="https://maps.app.goo.gl/gz84Dnqm5zUPeUVY6">Kisstadionban</a>
+Edzéseink alapvetően reggelente, munka előtt vannak a <a href="https://maps.app.goo.gl/Phnw8rZKnDywfwux9" target='_blank'>Tüskecsarnokban</a>, az <a href="https://maps.app.goo.gl/Gbus5m8r33B7EVTf7" target='_blank'>FTC sátras jégpályán</a>,<br>
+és a szezon végén - májusban és júniusban - a <a href="https://maps.app.goo.gl/gz84Dnqm5zUPeUVY6" target='_blank'>Kisstadionban</a>
 `;
 ---
+
+<style>
+    .edzesek {
+    padding-top: 10px;
+    padding-bottom: 10 px;
+    }
+</style>
 
 <Layout title="Edzések">
     <ContextAlert class="mb-8" />
     <h1 class="mb-10">Jégpályák, időpontok</h1>
     <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="/hoki" class="btn btn-lg sm:min-w-64">Többet is akarok!</a>
-    </p>
     <h2>Kori/hoki alapok</h2>
     <h3>Alapvető korcsolya tudás elsajátítása, az ütőkezelés, illetve passzok gyakorlása, a lövéstechnika alapjainak és  egyszerű feladatoknak a megismerése.</h3>
-    <div>
+    <div class='edzesek'>
         <ul>
             <li>Hétfő 7.00 - 8.00 - Tüskecsarnok</li>
             <li>Szerda 7.00 - 8.00 - Tüskecsarnok</li>
@@ -29,13 +33,13 @@ Edzéseink alapvetően reggelente, munka előtt vannak a <a href="https://maps.a
     <h3>Haladó edzés a bajnokságban részt vevő csapattal együtt megfelelő előképzettség után<br>
         Összetett, több passzból álló feladatok<br>
         A jégkorong játékhoz szükséges szabályok és játékelemek megismerése</h3>
-    <div>
+    <div class='edzesek'>
         <ul>
             <li>Hétfő 21.00 - 22.00 - FTC sátor</li>
         </ul>
     </div>
     <h2>Játék</h2>
-    <div>
+    <div class='edzesek'>
         <ul>
             <li>Csütörtök 7.00 - 8.00 - Tüskecsarnok</li>
             <li>Szombat kb. 8.00 - 9.00 - Tüskecsarnok</li>
