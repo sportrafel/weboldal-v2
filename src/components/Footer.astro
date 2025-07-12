@@ -75,6 +75,27 @@ const currentYear = new Date().getFullYear();
     margin-right: 4px;
     vertical-align: middle;
   }
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    justify-content: center;
+    flex: unset;
+    width: 100%;
+  }
+
+  .footer-center {
+    gap: 2rem; /* smaller spacing on mobile */
+  }
+}
+
 </style>
 
 
