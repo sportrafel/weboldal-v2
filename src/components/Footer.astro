@@ -6,47 +6,54 @@ const currentYear = new Date().getFullYear();
   .footer {
     background: none;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 2.5rem 1rem 0.7rem 1rem; /* Increased top padding */
+    display: flex;
+    flex-direction: column; /* Stack rows */
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    text-align: left;
+  }
+  .footer-top, .footer-bottom {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    text-align: left;
-  }
-  .footer-top, .footer-logo, .footer-links, .footer-socials, .footer-bottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.2rem;
     background: none;
     color: #fff;
     margin: 0;
     padding: 0;
   }
-  .footer-links a, .footer-socials a {
-    color: #fff !important;
-    text-decoration: underline;
+  .footer-bottom {
+    font-size: 0.95em;
+    opacity: 0.8;
+    margin-top: 0.3rem;
+    gap: 1rem;
   }
   .footer-logo img {
     width: 32px;
     height: 32px;
     object-fit: contain;
   }
-  .footer-bottom {
-    font-size: 0.95em;
-    opacity: 0.8;
+  .footer-links a, .footer-socials a {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+  .back-to-top-arrow {
+    margin-right: 4px;
+    vertical-align: middle;
   }
 </style>
 
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-logo">
-      <img src="../assets/SF-logo.png" alt="SF Logo" />
-      sportrafel.hu
-    </div>
     <div class="footer-links">
-      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Oldal tetejére</a>
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <svg class="back-to-top-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M8 4L4 8M8 4l4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Oldal tetejére
+      </a>
       <a href="/kapcsolat">Kapcsolat</a>
     </div>
     <div class="footer-socials">
@@ -59,6 +66,10 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
   <div class="footer-bottom">
-    &copy; 2025 @Balint Zentai. All rights reserved.
+    <div class="footer-logo">
+      <img src="../assets/SF-logo.png" alt="SF Logo" />
+      sportrafel.hu
+    </div>
+    <span>&copy; {currentYear} @Balint Zentai. All rights reserved.</span>
   </div>
 </footer>
