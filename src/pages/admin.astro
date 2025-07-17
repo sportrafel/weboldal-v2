@@ -1,1 +1,59 @@
-<h2>admin</h2>
+---
+import { useState } from 'react';
+
+const USERNAME = "admin";
+const PASSWORD = "supersecret"; // Change to your preferred password
+
+let loggedIn = false;
+let articleTitle = "";
+let articleContent = "";
+let message = "";
+
+function handleLogin(event) {
+  event.preventDefault();
+  const form = event.target;
+  if (form.username.value === USERNAME && form.password.value === PASSWORD) {
+    loggedIn = true;
+    message = "";
+  } else {
+    message = "Invalid credentials.";
+  }
+}
+
+function handleArticleSubmit(event) {
+  event.preventDefault();
+  // Here you need to add backend logic to actually save the article!
+  message = "Article would be submitted here (requires backend logic).";
+  articleTitle = "";
+  articleContent = "";
+}
+---
+
+{!loggedIn ? (
+  <form on:submit={handleLogin}>
+    <h2>Admin Login</h2>
+    <input name="username" placeholder="Username" required />
+    <input name="password" type="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+    {message && <div style="color:red;">{message}</div>}
+  </form>
+) : (
+  <form on:submit={handleArticleSubmit}>
+    <h2>New Blog Article</h2>
+    <input
+      name="title"
+      placeholder="Article Title"
+      bind:value={articleTitle}
+      required
+    />
+    <textarea
+      name="content"
+      placeholder="Article Content"
+      bind:value={articleContent}
+      required
+      rows="10"
+    ></textarea>
+    <button type="submit">Publish</button>
+    {message && <div style="color:green;">{message}</div>}
+  </form>
+)}
