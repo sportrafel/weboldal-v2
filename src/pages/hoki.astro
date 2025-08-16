@@ -4,15 +4,21 @@ import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-Az oldal fejlesztés alatt... Kérjük szíves türelmedet!
+Még senki sem volt nálunk olyan, aki végül ne ragadott volna ütőt, 
+hogy egy kicsit próbálkozzon a jégkorongozás alapjaival. 
+Annyira, hogy a legtöbben végül szenvedélyes játékossá váltak, 
+akik rendszeresen járnak kötetlen játékokra szabadidősportként, 
+de sokan egészen az amatőr jégkorongbajnokságig is eljutottak. 
+Hogy ki mit választ, csak rajta múlik, de a szórakoztató felfrissülés 
+minden esetben garantált a jó társaság által is!
 `;
 ---
 
 <Layout title="Hoki tanulás">
     <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Tanulj meg hokizni velünk!</h1>
+    <h1 class="mb-10">Ismerd meg a jégkorong sportot!</h1>
     <Markdown content={explainer} class="mb-10 text-lg" />
     <p>
-        <a href="/hoki" class="btn btn-lg sm:min-w-64">Többet is akarok!</a>
+        <a href="/kapcsolat" class="btn btn-lg sm:min-w-64">Szeretnék jelentkezni!</a>
     </p>
 </Layout>
